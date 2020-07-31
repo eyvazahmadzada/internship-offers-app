@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/title-icon.png">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Blinker&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/swiper.min.css">
+	<link rel="stylesheet" href="./css/animate.min.css">
+    <title>HOMEWORK</title>
+</head>
+<body>
+    <video muted autoplay loop>
+        <source src="./images/background.mp4">
+    </video>
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="header col-md-12 text-center">
+				<li><img class="img-responsive unistra animated flip" src="./images/unistra-logo.png" alt=""></li>
+				<li class="headertext animated bounceInDown">MY WEB FORM FOR INTERNSHIP OFFERS</li>
+				<li class="ufaz-header animated flip"><img class="img-responsive ufaz" src="./images/ufaz-logo.png" alt=""></li>
+			</ul>
+            <main class="webform col-md-9 col-lg-8">
+		    <section id="tabs">
+		        <ul>
+		            <li class="active"><a href="#tabs-1"><b>Company</b></a></li>
+		            <li class="tab-item"><a href="#tabs-2"><b>Project</b></a></li>
+		            <li class="tab-item"><a href="#tabs-3"><b>Terms and Conditions</b></a></li>
+				</ul>
+				<form action="index.php" method="POST" class="myform" target="_blank">
+		            <fieldset id="tabs-1">
+						<legend class="tabslegend"><b>Company Information</b></legend>
+		                <label for="companyname"><b>Company name: <span>*</span></b></label><br>
+						<input type="text" name="companyname" id="companyname" placeholder="Google" required><br><br>
+		                <h5 class="sectionheader head"><b>Contact details of the company</b></h5>
+		                <label for="companyphonenumber">Phone number: <span>*</span></label><br>
+		                <input type="number" name="companyphonenumber" id="companyphonenumber" placeholder="+1-800-555-1212" min="1" required>
+		                <label for="companyaddress">Address: <span>*</span></label><br>
+		                <input type="text" name="companyaddress" id="companyaddress" placeholder="1600 Amphitheatre Parkway" required>
+		                <label for="companywebsite">Website: <span>*</span></label><br>
+		                <input type="url" name="companywebsite" id="companywebsite" placeholder="https://www.google.com" required><br><br>
+		                <h5 class="head sectionheader"><b>Company profile</b></h5>
+		                <h5 class="sectionheader"><b>Small, medium or large?</b></h5>
+		                <input type="radio" id="small" name="smallmediumorlarge" value="small">
+		                <label for="small"><span></span>Small</label><br>
+		                <input type="radio" id="medium" name="smallmediumorlarge" value="medium">
+		                <label for="medium"><span></span>Medium</label><br>
+		                <input type="radio" id="large" name="smallmediumorlarge" value="large">
+		                <label for="large" id="largelabel"><span></span>Large</label><br>
+		                <h5 class="sectionheader"><b>Public or Private?</b></h5>
+		                <input type="radio" id="public" name="publicorprivate" value="public">
+		                <label for="public"><span></span>Public</label><br>
+		                <input type="radio" id="private" name="publicorprivate" value="private">
+		                <label for="private" id="privatelabel"><span></span>Private</label><br>
+		                <h5 class="sectionheader"><b>Local or International?</b></h5>
+		                <input type="radio" id="local" name="localorinternational" value="local">
+		                <label for="local"><span></span>Local</label><br>
+		                <input type="radio" id="international" name="localorinternational" value="international">
+						<label for="international"><span></span>International</label><br><br>
+						<label for="mainfield"><b>Main field of activity: <span>*</span></b></label><br>
+						<input type="text" id="mainfield" name="mainfield" placeholder="Software Engineering" required><br><br>
+						<h5 class="head sectionheader"><b>Contact person in the company</b></h5>
+						<label for="contactpersonname">Name: <span>*</span></label><br>
+						<input type="text" id="contactpersonname" name="contactpersonname" placeholder="Sundar" required>
+						<label for="contactpersonname">Surname: <span>*</span></label><br>
+						<input type="text" id="contactpersonsurname" name="contactpersonsurname" placeholder="Pichai" required>
+						<label for="contactpersonposition">Position: <span>*</span></label><br>
+						<input type="text" id="contactpersonposition" name="contactpersonposition" placeholder="CEO" required>
+						<label for="contactpersonnemail">Email: <span>*</span></label><br>
+						<input type="email" id="contactpersonnemail" name="contactpersonnemail" placeholder="sundar.pichai@gmail.com" required><br><br>
+						<button class="mybtn btn btn-primary btnnext" type="button">Next</button>
+		            </fieldset>
+					<fieldset id="tabs-2">
+						<legend class="tabslegend"><b>Project Information</b></legend>
+		                <label for="suggestedtopic"><b>Suggested project / Topic of the internship: <span>*</span></b></label>
+		                <textarea name="suggestedtopic" id="suggestedtopic" placeholder="Brief description of tasks to be performed so that the students have enough information to choose your internship" required></textarea><br class="br">
+		                <label for="numberoftrainees">Possible number of trainees on this project: </label><br>
+		                <input type="number" step="1" id="numberoftrainees" name="numberoftranees" placeholder="120" min="1"><br><br>
+		                <h5 class="sectionheader"><b>UFAZ specialties of interest for the company: </b></h5>
+		                <input type="checkbox" name="ce" id="ce" value="CE">
+		                <label for="ce"><span></span>Chemical Engineering</label><br>
+		                <input type="checkbox" name="cs" id="cs" value="CS">
+		                <label for="cs"><span></span>Computer Science</label><br>
+		                <input type="checkbox" name="geo" id="geo" value="GEO">
+		                <label for="geo"><span></span>Geosciences – Geophysics engineering </label><br>
+		                <input type="checkbox" name="og" id="og" value="OG">
+		                <label for="og"><span></span>Oil and Gas engineering</label><br><br>
+		                <label for="companydepartment">Company department in which the internship will be conducted: </label><br>
+		                <input type="text" name="companydepartment" id="companydepartment" placeholder="1600 Amphitheatre Parkway"><br>
+		                <label for="internshiplocation">Location of the internship (If it's different from company address): </label><br>
+		                <input type="text" name="internshiplocation" id="internshiplocation" placeholder="1600 Amphitheatre Parkway"><br><br>
+						<h5 class="sectionheader head"><b>Internship dates:</b></h5>
+						<section class="start">
+							<h5 class="sectionheader"><b>Internship starts: <span>*</span></b></h5>
+							<input name="startdate" type="date" id="startdate" max="2999-12-31" required>
+						</section>
+						<section class="end">
+							<h5 class="sectionheader"><b>Internship ends: <span>*</span></b></h5>
+							<input name="enddate" type="date" id="enddate" max="2999-12-31" required>
+						</section><br>
+		                <label for="duration">Duration (minimum 10 weeks): </label><br>
+						<input type="number" step="1" name="duration" id="duration" placeholder="10 weeks" min="10"><br><br><br>
+						<button class="mybtn btn btn-primary btnnext" type="button">Next</button>
+						<button class="mybtn btn btn-primary btnprev" type="button">Previous</button>
+		            </fieldset>
+		            <fieldset id="tabs-3">
+						<legend class="tabslegend"><b>Terms and Conditions</b></legend>
+		                <h5 class="sectionheader"><b>The internship will be:</b></h5>
+						<input type="radio" name="paidornotpaid" id="paid" value="paid">
+						<label for="paid"><span></span>Paid</label><br>
+						<input type="radio" name="paidornotpaid" id="notpaid" value="notpaid">
+						<label for="notpaid" id="notpaidlabel"><span></span>Not paid</label><br class="mybreak1">
+		                <label for="permonth" class="permonth">How much per month?</label><br>
+		                <input step="0.01" type="number" name="permonth" class="permonth" id="permonth" placeholder="400" min="1"><br>
+		                <h5 class="sectionheader">Will the company provide insurance to the trainees?</h5>
+		                <input type="radio" name="insuranceoftrainees" id="yesforinsurance" value="yes">
+		                <label for="yesforinsurance"><span></span>Yes</label><br>
+		                <input type="radio" name="insuranceoftrainees" id="noforinsurance" value="no">
+		                <label for="noforinsurance" id="nolabel"><span></span>No</label><br>
+						<section class="selectioncriterias" id="selectioncriterias">
+							<h5 class="sectionheader"><b>What is the main selection criteria for the company? <span>*</span> </b><i>(language skills, academic results, motivation letter, etc.)</i></h5>
+							<textarea name="mainselectioncriteria1" class="mainselectioncriteria" placeholder="Main selection criteria" required></textarea>
+							<textarea name="mainselectioncriteria2" class="mainselectioncriteria" placeholder="Main selection criteria" required></textarea>
+							<textarea name="mainselectioncriteria3" class="mainselectioncriteria" placeholder="Main selection criteria" required></textarea>
+						</section>
+						<button class="btn btn-success" id="addbtn" type="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+						<button class="btn btn-danger" id="removebtn" type="button"><i class="fa fa-times" aria-hidden="true"></i></button><br>
+		                <h5 class="sectionheader">Would the company like UFAZ administration support in selection process?</h5>
+		                <input type="radio" name="support" id="yes" value="yes">
+		                <label for="yes"><span></span>Yes</label><br>
+		                <input type="radio" name="support" id="no" value="no">
+		                <label for="no"><span></span>No</label><br class="mybreak2">
+		                <label for="support" class="support">What kind of support is expected from UFAZ?</label><br>
+		                <input type="text" name="supportofufaz" id="support" class="support" placeholder="CV screening, interviews, etc."><br>
+		                <label for="maxnumberofcvs">What is the maximum number of CVs that can be sent by UFAZ for the pre-selection?</label><br>
+		                <input type="number" step="1" name="maxnumberofcvs" id="maxnumberofcvs" placeholder="160" min="1"><br>
+		                <label for="othercomments" id="othercommentslabel">Other comments: (ex. any specific procedures to be done before being accepted to the internship?)</label>
+						<textarea name="othercomments" id="othercomments" placeholder="Some comments..."></textarea><br><br>
+						<span class="submiterror"><b>The form contains some errors. Please, go back and correct them!</b></span><br>
+						<button class="mybtn btn btn-primary btnsubmit" id="btnsubmit" type="submit">Submit</button>
+						<button class="mybtn btn btn-primary btnprev" type="button">Previous</button>
+					</fieldset>
+				</form>
+			</section>
+			</main>
+			<aside class="news col-md-3 col-lg-4 text-center">
+				<h2 class="asideheader"><b>News</b></h2>
+				<div class="swiper-container">	
+					<div class="swiper-wrapper">
+						<article class="swiper-slide text-center">
+							<h5 class="newssectionheader"><b>UFAZ represented at the International Education Fair in Ashgabat</b></h5>
+							<p class="newstext">On November 14-15, 2019, UFAZ participated in the annual International Education Exhibition held in Ashgabat, Turkmenistan, at the invitation of the Ministry of Education of Turkmenistan, UFAZ Secretary General Charlotte Payen participated in the international education fair and the scientific conference organized on a annual basis by the Turkmen government.<p>
+							<img src="./images/newsimage1.jpg" alt="" class="newsimage">
+							<p class="newstext">Following a traditional opening ceremony and senior government officials’ visit to the exhibitors’ booths that UFAZ shared with the French Institute of Ashgabat, UFAZ Secretary General was given to opportunity to briefly present the French-Azerbaijani University to the Vice Premier Mr Agamyradov in presence of the French Ambassador of France to Turkmenistan.</p>
+							<a class="readmore btn btn-primary mybtn" href="https://ufaz.az/en/news/ufaz-represented-at-international-education-fair-in-ashgabat/" target="_blank">Read more...</a>
+							</article>
+						<article class="swiper-slide text-center">
+							<h5 class="newssectionheader"><b>Research trip to AzLab for UFAZ fourth-year Oil and Gas Engineering students</b></h5>
+							<p class="newstext">On November 12, 2019, fourth-year Oil and Gas Engineering students visited “AZLAB” Exploration and Research Center, one of the largest research centers in the region together with UFAZ Student Affairs Specialist Gunay Farzaliyeva.
+
+									QHSE Manager Seymur Davidov welcomed students and provided them with the safety instructions before visiting the laboratories.<p>
+							<img src="./images/newsimage2.jpg" alt="" class="newsimage">
+							<p class="newstext">Students also visited Gas Chromatography Room and Oil Analysis Lab, accompanied by Analytics Lab Manager Yevgeniy Juravlyov, and received insights about the process.</p>
+							<a class="readmore btn btn-primary mybtn" href="https://ufaz.az/en/news/research-trip-to-azlab-for-ufaz-fourth-year-oil-and-gas-engineering-students/" target="_blank">Read more...</a>
+						</article>
+						<article class="swiper-slide text-center">
+							<h5 class="newssectionheader"><b>Ernst and Young (EY) representatives delivered a lecture to UFAZ students</b></h5>
+							<p class="newstext">On November 25, 2019, EY Climate Change and Sustainability Services Senior Farah Mammadli and Staff Assistant Sheida Karimova delivered a lecture to UFAZ fourth-year Geosciences Engineering and Computer science students on sustainable development in ecological and economic perspectives.<p>
+							<img src="./images/newsimage3.jpeg" alt="" class="newsimage">
+							<p class="newstext">Mrs. Mammadli also provided insights on evaluation criteria for social responsibility evolution in society, ecological balance of natural resources extraction and sustainable operation that are factors affecting economic development. To illustrate linear economy limitations and benefits of the circular economy, she provided global statistical data.</p>
+							<a class="readmore btn btn-primary mybtn" href="https://ufaz.az/en/news/ernst-young-ey-representatives-delivered-a-lecture-to-ufaz-students/" target="_blank">Read more...</a>
+						</article>
+						<article class="swiper-slide text-center">
+							<h5 class="newssectionheader"><b>UFAZ participated in SPE Annual Caspian Technical Conference 2019</b></h5>
+							<p class="newstext">On October 18, 2019, UFAZ Secretary-General Charlotte Payen represented UFAZ at the 6th annual SPE Annual Caspian Technical Conference focused on the digital transformation taking place in the oil and gas industry.<p>
+							<img src="./images/newsimage4.jpg" alt="" class="newsimage">
+							<p class="newstext">This panel involved several other speakers, including, BP HR Manager for GPO, RD and Strategy & Region Mehriban Ayyubova, Schlumberger HR Director to Workforce Planning and Talent Management Fabrice Bouchard, Baker Hughes ASPIRE Services Operation Emilya Mammadova. </p>
+							<a class="readmore btn btn-primary mybtn" href="https://ufaz.az/en/news/ufaz-participated-in-spe-annual-caspian-technical-conference-2019/" target="_blank">Read more...</a>
+						</article>
+						<article class="swiper-slide text-center">
+							<h5 class="newssectionheader"><b>UFAZ Geosciences Engineering students on a site visit to Baker Hughes Company</b></h5>
+							<p class="newstext">On November 5, 2019 UFAZ fourth-year Geoscience Engineering students, together with UFAZ Oil and Gas Coordinator Fidan Aslanzade, visited Baker Hughes, Wireline logging site. Baker Hughes is an energy technology company that provides solutions for energy and industrial customers worldwide.
+
+									Baker Hughes Geoscientist Aleksandra Khramtseva, welcomed UFAZ students and provided them with safety instruction before visiting the laboratories.<p>
+							<img src="./images/newsimage5.jpg" alt="" class="newsimage">
+							<p class="newstext">Students were accompanied on site by Mr Nusret Imamverdiyev, Staff Development Manager, to observe the operational capacity and processing in three laboratories namely, hydraulic laboratory, mechanical laboratory and electricity laboratory.</p>
+							<a class="readmore btn btn-primary mybtn" href="https://ufaz.az/en/news/ufaz-geosciences-engineering-students-on-a-site-visit-to-baker-hughes-company/" target="_blank">Read more...</a>
+						</article>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<h4 class="videoheader"><b>Video</b></h4>
+				<section class="videosection">
+					<h5 class="videosectionheader"><b>The French-Azerbaijani University proudly presents next interview with the invited professor, Dr. Eric Christoffel who has been teaching the "Web Programming" in UFAZ in November 2018. Dr Christoffel is working and teaching at the University of Strasbourg, France.</b></h5>
+					<iframe src="https://www.youtube.com/embed/vebkxYhZEvU"></iframe>
+				</section>
+			</aside>
+            <section class="contact col-md-12 text-center">
+				<h2><b>Contact Information</b></h2>
+				<h4>Please send us back the form by e-mail to:</h4>
+				<p>Latifa Nasibova, Head of Educational Department <br>
+				Email: Latifa.nasibova@ufaz.az <br>
+				Phone number: +994 12 599 00 74</p>
+            </section>
+		</div>
+		
+
+	</div>
+	
+    <footer>
+            &copy; Copyright 2019<br>
+            Created by Eyvaz Ahmadzada
+	</footer>
+    <script>
+        $( function() {
+            $("#tabs").tabs();
+            $( "#tabs" ).tabs({ active: 0 });
+        } );
+	</script>
+	<script>
+		$('#tabs').tabs({
+			hide: {
+				effect: "drop",
+				duration: 400
+			}
+		});
+	</script>
+	<script src="./js/swiper.min.js"></script>
+  	<script>
+		var swiper = new Swiper('.swiper-container', {
+			spaceBetween: 30,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			autoplay: {
+				delay: 3000,
+				effect: 'fade',
+			}
+		});
+	</script>
+	<script src="./js/jquery.validate.min.js"></script>
+    <script src="script.js"></script>
+    <script src="./js/tether.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
